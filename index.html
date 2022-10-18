@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #C1BFF2;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #393770;
+            width: 40vw;
+            height: 40vh;
+            border-radius: 50px;
+        }
+        .campos{
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 1312px;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            color: #fdfdfd;
+        }
+        .campos input{
+            margin: 10px 0;
+            height: 30px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        .botoes button, .botoes input{
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #605CBD;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="./arquivo.php" method="POST">
+        <div class="campos">
+            <label for="">Usuário</label>
+            <input type="text" id="usuario" class="usuario" name="usuario" required> 
+        </div>
+        <div class="campos">
+            <label for="">Data de nascimento</label>
+            <input type="date" id="data" class="data" name="data">
+        </div>
+        <div class="botoes">
+            <input type="button" onclick="limpaForm()" class="cancelar" alt="limpa o formulário" value="cancelar" required>
+            <button type="submit">Envia</button>
+        </div>
+    </form>
+    <script>
+        function limpaForm(){ 
+            document.querySelector('#usuario').value = '';
+            document.querySelector('#senha').value = '';
+        }
+    </script>
+</body>
+</html>
